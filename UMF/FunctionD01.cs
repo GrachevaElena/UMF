@@ -30,7 +30,7 @@ namespace UMF
                 case 3:
                     for (int i = 1; i < n; i++) {
                         double sqrtLambda = FindSqrtLambda(i);
-                        s += (1 + Math.Cos(2 * sqrtLambda) - 2 * Math.Cos(sqrtLambda)) * Math.Sin(sqrtLambda * x) / Math.Sqrt(sqrtLambda - Math.Sin(sqrtLambda * 4) / 4);
+                        s += (1 + Math.Cos(2 * sqrtLambda) - 2 * Math.Cos(sqrtLambda)) * Math.Sin(sqrtLambda * x) / Math.Sqrt(1 - Math.Sin(sqrtLambda * 4) / 4 / sqrtLambda);
                     }
                         return s;
                 default: return 0;
